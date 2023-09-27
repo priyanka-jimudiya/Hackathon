@@ -1,0 +1,54 @@
+/* #216383 first
+   #71BFBC */
+body{
+  background-color: #71BFBC ;
+}
+          
+a{
+  text-decoration: none;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #3d8986 0%, #71BFBC   51%, #71BFBC  100%);
+  margin: 5px;
+  padding: 6px 18px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-grad-reverse{
+  background-color: transparent;
+  border: 2px solid #71BFBC;
+  color: #71BFBC;
+  margin: 5px;
+  padding: 6px 18px;
+  transition: 0.5s;           
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad-reverse:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #71BFBC;
+  border: 2px solid #71BFBC;
+}
+
+.nav-link:hover{
+  color: #3d8986 !important;
+}
+
+.navbar-toggler:focus{
+  box-shadow: 1px 1px 0px 0px #71BFBC;
+}
