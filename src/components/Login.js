@@ -18,7 +18,7 @@ function Login() {
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().email("Enter Valid Email").required("Required Email"),
-        password: Yup.string().min(3, "Must be 8 character").required("Required Password")
+        password: Yup.string().min(8, "Must be 8 character").required("Required Password")
 
     })
 
