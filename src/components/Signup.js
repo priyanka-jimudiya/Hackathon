@@ -31,6 +31,7 @@ function Signup() {
     })
 
     const onSubmit = (values, props) => {
+        alert('Registration Susscefully...');
         console.log(values)
     }
     return (
@@ -43,7 +44,6 @@ function Signup() {
                         <h4><b>Register</b></h4>
                         <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                             {(props) => (<Form>
-
                                 <FormControl margin="normal" required>
                                     <Grid>
                                         <Field as={TextField}
@@ -108,6 +108,7 @@ function Signup() {
 
                                         />
 
+
                                         <Field as={TextField}
                                             name="password"
                                             id="standard-basic"
@@ -117,7 +118,6 @@ function Signup() {
                                             margin="normal"
                                             size="small"
                                             helperText={<ErrorMessage name="password" />}
-
                                         />
 
                                     </Grid>
