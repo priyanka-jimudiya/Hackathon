@@ -37,7 +37,7 @@ function Signup() {
     return (
         <>
             <Grid>
-                <Paper elevation={100} style={paperStyle}>
+                <Paper elevation={10} style={paperStyle}>
                     <Grid align='center'>
 
                         <Avatar style={colorStyle}><HowToRegIcon></HowToRegIcon></Avatar>

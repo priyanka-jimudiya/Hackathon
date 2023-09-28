@@ -12,3 +12,9 @@ code {
     monospace;
 }
 
+.MuiFormHelperText-root{
+  color: red !important;
+} 
+.container .cards{
+  margin-left: 35px;
+}

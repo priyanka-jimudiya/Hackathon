@@ -1,8 +1,9 @@
-import { Grid, Paper, Avatar } from '@mui/material';
+import { Grid, Paper, Avatar, Typography } from '@mui/material';
 import { LockClockOutlined } from '@mui/icons-material';
 import { FormControl, TextField, Button } from '@mui/material';
-import { Formik, Form, Field, ErrorMessage, } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import React from 'react';
+import { Link } from "react-router-dom";
 import * as Yup from 'yup';
 
 function Login() {
@@ -17,16 +18,18 @@ function Login() {
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().email("Enter Valid Email").required("Required Email"),
-        password: Yup.string().min(8, "Must be 8 character").required("Required Password")
+        password: Yup.string().min(3, "Must be 8 character").required("Required Password")
 
     })
 
     const onSubmit = (values, props) => {
-        alert('Done');
+        // alert('Done');
+        setTimeout(() => {
+            props.resetForm()
+            props.setSubmitting(false)
+        }, 2000)
         console.log(values)
     }
-
-
 
     return (
 
@@ -57,12 +60,22 @@ function Login() {
                                     type="password"
                                     autoComplete="current-password"
                                     variant="standard"
-                                    helperText={<ErrorMessage name="email" />}
+                                    helperText={<ErrorMessage name="password" />}
                                 />
                             </FormControl>
-                            <Button type="submit" variant="contained" name="login" style={colorStyle} fullWidth margin="20px">Login</Button>
+                            <Button type="submit" variant="contained" name="login" style={colorStyle} fullWidth margin="20px" disabled={props.isSubmitting}>{props.isSubmitting ? "Loading" : "Login"}</Button>
+                            {/* <Button type="submit" variant="contained" name="login" style={colorStyle} fullWidth margin="20px">Login</Button> */}
+
                             <h6>or</h6>
                             <Button variant="outlined" fullWidth margin="20px">Google</Button>
+
+                            <hr />
+                            <Typography>
+                                <Link to='/'>
+                                    Forget Password ?
+                                </Link>
+                            </Typography>
+
                         </Form>
                         )}
                     </Formik >
