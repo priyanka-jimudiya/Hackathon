@@ -70,6 +70,10 @@ function Signup() {
                                             helperText={<ErrorMessage name="lastname" />}
 
                                         />
+                                    </Grid>
+                                    <Grid>
+
+
 
                                         <Field as={TextField}
                                             name="contact"
@@ -94,6 +98,8 @@ function Signup() {
                                             margin="dense"
 
                                         />
+                                    </Grid>
+                                    <Grid>
 
                                         <Field as={TextField}
                                             name="email"
@@ -121,6 +127,7 @@ function Signup() {
                                         />
 
                                     </Grid>
+
                                 </FormControl>
                                 <hr />
                                 <Button type='submit' variant="contained" name="register" style={colorStyle} fullWidth margin="20px">Register</Button>
