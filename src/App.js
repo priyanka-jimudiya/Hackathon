@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Template from './components/Template'
+// import Editor from './Editor'
 
 
 export default function App() {
@@ -21,7 +22,6 @@ export default function App() {
                     <Route exact path="/login" element={<Login />}></Route>
                     <Route exact path="/register" element={<Signup />}></Route>
                     <Route exact path="/template" element={<Template />}></Route>
-
                     <Route path="/" element={<Home />}></Route>
                 </Routes>
             </Router>

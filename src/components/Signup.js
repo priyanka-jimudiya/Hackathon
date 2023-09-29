@@ -65,9 +65,9 @@
 //           setAction(act)
 //           return
 //         }
-    
+
 //         if ("SIGN UP") {
-          
+
 //           if (formData.name.length > 0 && formData.contact.length === 10 && formData.email.length >= 6 && formData.password.length >= 6) {
 //             // Code to submit signup
 //             // alert('signup')
@@ -251,7 +251,7 @@ function Signup() {
   const colorStyle = { backgroundColor: '#71BFBC' };
 
   const [currentPage, setCurrentPage] = useState('SIGN UP');
-  
+
   const validationSchema = Yup.object().shape({
     firstname: Yup.string().min(1, 'Too Short').required('Required First Name'),
     lastname: Yup.string().min(1, 'Too Short').required('Required Last Name'),
@@ -263,7 +263,7 @@ function Signup() {
     password: Yup.string().min(8, 'Must be 8 characters').required('Required Password'),
   });
 
-  
+
   const formik = useFormik({
     initialValues: {
       firstname: '',
@@ -275,38 +275,38 @@ function Signup() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-        if (
-            formik.values.firstname &&
-            formik.values.firstname.length > 1 &&
-            formik.values.lastname &&
-            formik.values.lastname.length > 1 &&
-            formik.values.contact &&
-            formik.values.contact.length == 10 &&
-            formik.values.email &&
-            formik.values.email.length > 6 &&
-            formik.values.password &&
-            formik.values.password.length > 6
-          ) {
-            // Code to submit signup
-            axios
-              .post('http://127.0.0.1:8000/auth/signup', values) // Use values from formik
-              .then((response) => {
-                if (response.data) {
-                  alert(response.data.message);
-                } else {
-                  alert('Unexpected response from the server');
-                }
-              })
-              .catch((error) => {
-                if (error.response && error.response.data) {
-                  alert(error.response.data.error);
-                } else {
-                  alert('An error occurred while making the request.');
-                }
-              });
-          } else {
-            alert('Please fill all details or validations error');
-          }
+      if (
+        formik.values.firstname &&
+        formik.values.firstname.length > 1 &&
+        formik.values.lastname &&
+        formik.values.lastname.length > 1 &&
+        formik.values.contact &&
+        formik.values.contact.length == 10 &&
+        formik.values.email &&
+        formik.values.email.length > 6 &&
+        formik.values.password &&
+        formik.values.password.length > 6
+      ) {
+        // Code to submit signup
+        axios
+          .post('http://certificate-gen.tech2space.in:8000/auth/signup', values) // Use values from formik
+          .then((response) => {
+            if (response.data) {
+              alert(response.data.message);
+            } else {
+              alert('Unexpected response from the server');
+            }
+          })
+          .catch((error) => {
+            if (error.response && error.response.data) {
+              alert(error.response.data.error);
+            } else {
+              alert('An error occurred while making the request.');
+            }
+          });
+      } else {
+        alert('Please fill all details or validations error');
+      }
     },
   });
 
@@ -413,7 +413,7 @@ function Signup() {
                 style={colorStyle}
                 fullWidth
                 margin='20px'
-                // onClick={() => handleSignup}
+              // onClick={() => handleSignup}
               >
                 Register
               </Button>

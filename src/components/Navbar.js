@@ -30,6 +30,10 @@ export default function Navbar() {
                 {/* <a className="nav-link" href="">Contact</a> */}
                 <Link className="nav-link" to='/contact'>Contact</Link>
               </li>
+              <li className="nav-item">
+                {/* <a className="nav-link" href="">Contact</a> */}
+                <a className="nav-link" href='http://certificate-gen.tech2space.in:8080'>Editor</a>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               {/* <a className="btn-grad" type="submit">Login</a> */}

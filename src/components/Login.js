@@ -16,7 +16,7 @@
 //         password: ''
 //     }
 
-  
+
 
 
 //     const validationSchema = Yup.object().shape({
@@ -33,7 +33,7 @@
 //         }, 2000)
 //         console.log(values)
 
-         
+
 //     }
 
 //     return (
@@ -140,19 +140,19 @@ function Login() {
     // const history = useHistory();
 
     const onSubmit = (values, { setSubmitting, resetForm }) => {
-        axios.post('http://127.0.0.1:8000/auth/login', values)
+        axios.post('http://certificate-gen.tech2space.in:8000/auth/login', values)
             .then((response) => {
-    console.log(response); // Add this line for debugging
-    if (response) {
-        // Authentication successful
-        alert('Login successful');
-        resetForm();
-        // history.push('/dashboard'); // Redirect to the dashboard or any other page
-    } else {
-        // Authentication failed
-        alert('Authentication failed. Please check your credentials.');
-    }
-})
+                console.log(response); // Add this line for debugging
+                if (response) {
+                    // Authentication successful
+                    alert('Login successful');
+                    resetForm();
+                    // history.push('/dashboard'); // Redirect to the dashboard or any other page
+                } else {
+                    // Authentication failed
+                    alert('Authentication failed. Please check your credentials.');
+                }
+            })
 
             .catch((error) => {
                 // Handle request error
@@ -204,7 +204,7 @@ function Login() {
                                         Forgot Password?
                                     </Link> */}
                                 </Typography>
-                            </Form> 
+                            </Form>
                         )}
                     </Formik>
                 </Grid>
