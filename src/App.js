@@ -8,7 +8,7 @@ import Contact from './components/Contact'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Template from './components/Template'
-import Footer from './components/Footer';
+
 
 export default function App() {
     return (
@@ -25,7 +25,6 @@ export default function App() {
                     <Route path="/" element={<Home />}></Route>
                 </Routes>
             </Router>
-            <Footer />
         </>
     )
 }
